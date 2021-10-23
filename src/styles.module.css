@@ -176,6 +176,25 @@ color: #666666;
 .modal__logo{
     padding-right: 29px;
 }
-.total{
-    
+.total__confirmed{
+padding-left: 300px;
+}
+.total__death{
+    padding-left: 345px;
+}
+.total__recovered{
+    padding-left: 360px;
+}
+.modal__button{
+    width: 171px;
+height: 49px;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+margin-left: 200px
+;
+color: #FFFFFF;
+border: none;
+background: #2196F3;
+border-radius: 20px;
 }

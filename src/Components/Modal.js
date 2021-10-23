@@ -21,17 +21,18 @@ class Modal extends Component {
           <ul>
             <li className={styles.modal__list}>
               <img className={styles.modal__logo} src={confirmed} alt="TotalConfirmed" />
-              Total Confirmed <span className={styles.total}>{this.props.country.TotalConfirmed}</span>
+              Total Confirmed
+              <span className={styles.total__confirmed}>{this.props.country.TotalConfirmed}</span>
             </li>
             <li className={styles.modal__list}>
               <img className={styles.modal__logo} src={deaths} alt="TotalDeaths" />
-              Total Deaths <span className={styles.total}>{this.props.country.TotalDeaths}</span>
+              Total Deaths <span className={styles.total__death}>{this.props.country.TotalDeaths}</span>
             </li>
             <li className={styles.modal__list}>
               <img className={styles.modal__logo} src={recovered} alt="TotalRecovered" />
-              Total Recovered <span className={styles.total}>{this.props.country.TotalRecovered}</span>
+              Total Recovered<span className={styles.total__recovered}>{this.props.country.TotalRecovered}</span>
             </li>
-            <div />
+            <button className={styles.modal__button}>OK</button>
           </ul>
         </div>
       </div>

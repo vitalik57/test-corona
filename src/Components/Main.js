@@ -61,7 +61,6 @@ class Main extends Component {
           {" "}
           {/* <input type="text" name="inputValue" value={this.state.inputValue} onChange={this.handleChange} /> */}
           <Filter handleChange={this.handleChange} />
-          MAin page
           {this.state.countries.length ? (
             <CountryList countries={this.getVisibleCountries()} toogleModal={this.toogleModal} getCountry={this.getCountry} />
           ) : (
