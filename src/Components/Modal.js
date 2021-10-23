@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import confirmed from "../logo/Vector1.png";
+import deaths from "../logo/Vector2.png";
+import recovered from "../logo/Vector3.png";
 
 import styles from "../styles.module.css";
 class Modal extends Component {
@@ -14,11 +17,21 @@ class Modal extends Component {
     return (
       <div className={styles.Overlay} onClick={this.props.closeModal}>
         <div className={styles.Modal}>
-          <h2>{this.props.country.Country}</h2>
+          <h2 className={styles.modal__country__name}>{this.props.country.Country}</h2>
           <ul>
-            <li>Total Confirmed{this.props.country.TotalConfirmed}</li>
-            <li>Total Deaths{this.props.country.TotalDeaths}</li>
-            <li>Total Recovered{this.props.country.TotalRecovered}</li>
+            <li className={styles.modal__list}>
+              <img className={styles.modal__logo} src={confirmed} alt="TotalConfirmed" />
+              Total Confirmed <span className={styles.total}>{this.props.country.TotalConfirmed}</span>
+            </li>
+            <li className={styles.modal__list}>
+              <img className={styles.modal__logo} src={deaths} alt="TotalDeaths" />
+              Total Deaths <span className={styles.total}>{this.props.country.TotalDeaths}</span>
+            </li>
+            <li className={styles.modal__list}>
+              <img className={styles.modal__logo} src={recovered} alt="TotalRecovered" />
+              Total Recovered <span className={styles.total}>{this.props.country.TotalRecovered}</span>
+            </li>
+            <div />
           </ul>
         </div>
       </div>

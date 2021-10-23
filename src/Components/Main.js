@@ -10,12 +10,13 @@ class Main extends Component {
     countries: [],
     country: {},
     inputValue: "",
-    showModal: false
+    showModal: false,
+    number: []
   };
 
   componentDidMount() {
     axios.get("https://api.covid19api.com/summary").then(res => this.setState({ countries: res.data.Countries }));
-
+    this.get();
     //   console.log(res.data.Countries));
   }
   toogleModal = () => {
@@ -41,10 +42,21 @@ class Main extends Component {
     });
     this.toogleModal();
   };
+  get = () => {
+    const max = this.state.countries.length;
+
+    for (let i = 1; i < max; i += 1) {
+      this.setState({ number: i });
+    }
+  };
   render() {
     const { showModal, country } = this.state;
     return (
       <>
+        {/* {this.state.countries.map(item => (
+          <li>{item}</li>
+        ))} */}
+
         <div className={styles.container}>
           {" "}
           {/* <input type="text" name="inputValue" value={this.state.inputValue} onChange={this.handleChange} /> */}
