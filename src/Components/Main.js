@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
-import CountryList from "./CountryList";
-import Filter from "./Filter";
+import CountryList from "./countryList/CountryList";
+import Filter from "./filter/Filter";
 import Modal from "./Modal";
 import styles from "../styles.module.css";
 
@@ -53,13 +53,7 @@ class Main extends Component {
     const { showModal, country } = this.state;
     return (
       <>
-        {/* {this.state.countries.map(item => (
-          <li>{item}</li>
-        ))} */}
-
         <div className={styles.container}>
-          {" "}
-          {/* <input type="text" name="inputValue" value={this.state.inputValue} onChange={this.handleChange} /> */}
           <Filter handleChange={this.handleChange} />
           {this.state.countries.length ? (
             <CountryList countries={this.getVisibleCountries()} toogleModal={this.toogleModal} getCountry={this.getCountry} />
