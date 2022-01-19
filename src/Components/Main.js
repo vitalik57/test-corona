@@ -17,6 +17,7 @@ class Main extends Component {
   componentDidMount() {
     axios.get("https://api.covid19api.com/summary").then(res => this.setState({ countries: res.data.Countries }));
     this.get();
+    // const { name, value } = e.target;
     //   console.log(res.data.Countries));
   }
   toogleModal = () => {
