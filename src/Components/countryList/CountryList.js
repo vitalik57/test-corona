@@ -1,8 +1,12 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 import styles from "../../styles.module.css";
 import { CountryListStyled } from "./CountryListStyled";
 
 const CountryList = ({ countries, getCountry }) => {
+  useEffect(() => {
+    axios.get("https://api.spaceflightnewsapi.net/v3/articles").then(res => console.log(res.data));
+  }, []);
   return (
     <>
       <CountryListStyled>
